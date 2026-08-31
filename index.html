@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paradise Spa | Luxury Wellness & Holistic Sanctuary</title>
+  <meta name="description" content="Experience ultimate relaxation at Paradise Spa. Offering 15 exclusive luxury massage therapies, organic aromatherapy, hot stone, and body rituals in a serene Imperial Sapphire setting.">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Fixed Floating WhatsApp Button -->
+  <a href="https://wa.me/916366377888?text=Hello%20Paradise%20Spa,%20I%20would%20like%20to%20inquire%20about%20a%20booking." 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="floating-whatsapp" 
+     aria-label="Book on WhatsApp"
+     title="Chat with Paradise Spa on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-label="Image Lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox"><i class="fa-solid fa-xmark"></i></button>
+    <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous Image"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="lightbox-next" id="lightboxNext" aria-label="Next Image"><i class="fa-solid fa-chevron-right"></i></button>
+    <div class="lightbox-content">
+      <img src="" alt="Spa Gallery Highlight" class="lightbox-img" id="lightboxImg">
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <!-- Mobile Nav Overlay & Drawer -->
+  <div class="mobile-nav-overlay" id="mobileOverlay"></div>
+  <div class="mobile-nav-drawer" id="mobileDrawer">
+    <a href="#home" class="mobile-nav-link">Home</a>
+    <a href="#about" class="mobile-nav-link">About Us</a>
+    <a href="#services" class="mobile-nav-link">Services</a>
+    <a href="#gallery" class="mobile-nav-link">Gallery</a>
+    <a href="#offers" class="mobile-nav-link">Special Offers</a>
+    <a href="#reviews" class="mobile-nav-link">Reviews</a>
+    <a href="#contact" class="mobile-nav-link">Contact</a>
+    <a href="https://wa.me/916366377888?text=Hello%20Paradise%20Spa,%20I%20would%20like%20to%20book%20an%20appointment." 
+       target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-top: 1rem;">
+      <i class="fa-brands fa-whatsapp"></i> Book via WhatsApp
+    </a>
+  </div>
+
+  <!-- Sticky Header Navigation -->
+  <header class="header" id="header">
+    <div class="container nav-container">
+      <a href="#home" class="brand-logo">
+        <img src="assets/logo.png" alt="Paradise Spa Logo" class="logo-img">
+        <span>Paradise<span class="highlight">Spa</span></span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#offers" class="nav-link">Offers</a>
+        <a href="#reviews" class="nav-link">Reviews</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://wa.me/916366377888?text=Hello%20Paradise%20Spa,%20I%20would%20like%20to%20book%20an%20appointment." 
+           target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          <i class="fa-brands fa-whatsapp"></i> Book Now
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- 1. HERO SECTION -->
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+      <div class="container">
+        <div class="hero-content fade-up">
+          <div class="hero-badge">
+            <i class="fa-solid fa-crown"></i> Premier Luxury Wellness Sanctuary
+          </div>
+          <h1 class="hero-title">
+            Surrender to Pure <span class="italic">Serenity</span> & Rejuvenation
+          </h1>
+          <p class="hero-description">
+            Immerse yourself in our tranquil Imperial Sapphire oasis. Experience bespoke holistic massage therapies, ancient healing rituals, and organic botanical scents designed to restore harmony to your mind, body, and spirit.
+          </p>
+          <div class="hero-btns">
+            <a href="#services" class="btn btn-primary">
+              Explore Services <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="https://wa.me/916366377888?text=Hello%20Paradise%20Spa,%20I%20would%20like%20to%20book%20an%20appointment." 
+               target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <i class="fa-brands fa-whatsapp"></i> Book via WhatsApp
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <h3 class="counter" data-target="15">0</h3>
+              <p>Luxury Therapies</p>
+            </div>
+            <div class="stat-item">
+              <h3 class="counter" data-target="15000">0</h3>
+              <p>Happy Clients</p>
+            </div>
+            <div class="stat-item">
+              <h3>4.9 <i class="fa-solid fa-star" style="font-size: 1.2rem; color: #F59E0B;"></i></h3>
+              <p>5-Star Reviews</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ABOUT US SECTION -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image-wrap fade-up">
+            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=85" 
+                 alt="Luxury Massage Treatment" class="about-img-main">
+            <img src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?auto=format&fit=crop&w=500&q=85" 
+                 alt="Aromatherapy Oils and Flowers" class="about-img-accent">
+            <div class="glass-card about-badge-card">
+              <div class="about-badge-icon">
+                <i class="fa-solid fa-award"></i>
+              </div>
+              <div class="about-badge-text">
+                <h4>10+ Years</h4>
+                <p>Excellence in Wellness</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-content fade-up">
+            <div class="section-title-wrap" style="text-align: left; margin-bottom: 2rem;">
+              <span class="section-subtitle">Our Philosophy</span>
+              <h2 class="section-title">Where Ancient Healing Meets Modern Elegance</h2>
+              <p class="section-description">
+                At Paradise Spa, we believe relaxation is not a luxury—it is a vital pillar of health. Founded as an exclusive haven in the heart of the city, our sanctuary blends traditional Eastern therapeutic wisdom with sophisticated Western techniques.
+              </p>
+            </div>
+            <p style="margin-bottom: 2rem;">
+              Every treatment is tailored to your individual bio-rhythms using hand-blended cold-pressed essential oils, warm herbal infusions, and therapeutic touches from our master certified therapists.
+            </p>
+
+            <div class="about-features">
+              <div class="feature-box">
+                <i class="fa-solid fa-user-check"></i>
+                <h4>Master Therapists</h4>
+                <p>Internationally certified experts trained in traditional bodywork techniques.</p>
+              </div>
+              <div class="feature-box">
+                <i class="fa-solid fa-leaf"></i>
+                <h4>100% Organic Oils</h4>
+                <p>Pure cold-pressed botanicals and custom aromatherapeutic blends.</p>
+              </div>
+              <div class="feature-box">
+                <i class="fa-solid fa-hotel"></i>
+                <h4>Private Suites</h4>
+                <p>Soundproofed velvet sapphire rooms with private showers and mood lighting.</p>
+              </div>
+              <div class="feature-box">
+                <i class="fa-solid fa-heart-pulse"></i>
+                <h4>Customized Rituals</h4>
+                <p>Personalized consultation before every therapy session.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SERVICES SECTION (15 Luxury Massages) -->
+    <section class="section services-section" id="services">
+      <div class="container">
+        <div class="section-title-wrap fade-up">
+          <span class="section-subtitle">Curated Wellness Menu</span>
+          <h2 class="section-title">15 Luxury Massage Therapies</h2>
+          <p class="section-description">
+            Discover our comprehensive selection of signature therapeutic massage treatments crafted for profound muscle relief, stress reduction, and vital energy balance.
+          </p>
+        </div>
+
+        <div class="services-grid">
+
+          <!-- 1. Deep Tissue Therapy -->
+          <div class="glass-card service-card fade-up">
+            <div class="service-img-wrap">
+              <img src="assets/s1.jpeg" alt="Deep Tissue Therapy" class="service-img">
+              <span class="service-tag">Best Seller</span>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Deep Tissue Therapy</h3>
+              <p class="service-desc">Targeting deep muscle layers and connective fascia to release persistent knots, chronic neck tension, and sports fatigue.</p>
+              <div class="service-footer">
+                <div class="service-meta">
+                  <span class="service-duration"><i class="fa-regular fa-clock"></i> 60 / 90 Mins</span>
+                  <span class="service-price">₹3,499</span>
+                </div>
+                <a href="https://wa.me/916366377888?text=Hello%20Paradise%20Spa,%20I%20would%20like%20to%20book%20the%20Deep%20Tissue%20Therapy%20treatment." 
+                   target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  <i class="fa-brands fa-whatsapp"></i> Book Treatment
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Swedish Relaxation Massage -->
+          <div class="glass-card service-card fade-up">
+            <div class="service-img-wrap">
+              <img src="assets/s2.jpeg" alt="Swedish Relaxation Massage" class="service-img">
+              <span class="service-tag">Relaxation</span>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Swedish Relaxation Massage</h3>
+              <p class="service-desc">Classic gentle full-body massage utilizing long gliding strokes, kneading, and circular motions to calm the nervous system.</p>
+              <div class="service-footer">
+                <div class="service-meta">
+                  <span class="service-duration"><i class="fa-regular fa-clock"></i> 60 Mins</span>
+                  <span class="service-price">₹2,999</span>
+                </div>
+                <a href="https://wa.me/916366377888?text=Hello%20Paradise%20Spa,%20I%20would%20like%20to%20book%20the%20Swedish%20Relaxation%20Massage%20treatment." 
+                   target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  <i class="fa-brands fa-whatsapp"></i> Book Treatment
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Signature Aromatherapy Ritual -->
+          <div class="glass-card service-card fade-up">
+            <div class="service-img-wrap">
+              <img src="assets/s3.jpeg" alt="Signature Aromatherapy Ritual" class="service-img">
+              <span class="service-tag">Aromatic</span>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Signature Aromatherapy Ritual</h3>
+              <p class="service-desc">Custom-blended lavender, eucalyptus, and rose essential oils infused into a soothing holistic massage experience.</p>
+              <div class="service-footer">
+                <div class="service-meta">
+                  <span class="service-duration"><i class="fa-regular fa-clock"></i> 60 / 90 Mins</span>
+                  <span class="service-price">₹3,299</span>
+                </div>
+                <a href="https://wa.me/916366377888?text=Hello%20Paradise%20Spa,%20I%20would%20like%20to%20book%20the%20Signature%20Aromatherapy%20Ritual%20treatment." 
+                   target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  <i class="fa-brands fa-whatsapp"></i> Book Treatment
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Volcanic Hot Stone Therapy -->
+          <div class="glass-card service-card fade-up">
+            <div class="service-img-wrap">
+              <img src="assets/s4.jpeg" alt="Volcanic Hot Stone Therapy" class="service-img">
+              <span class="service-tag">Popular</span>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Volcanic Hot Stone Therapy</h3>
+              <p class="service-desc">Smooth heated volcanic basalt stones placed on key energy points to melt muscular stiffness and enhance blood flow.</p>
+              <div class="service-footer">
+                <div class="service-meta">
+                  <span class="service-duration"><i class="fa-regular fa-clock"></i> 75 Mins</span>
+                  <span class="service-price">₹3,999</span>
+                </div>
+                <a href="https://wa.me/916366377888?text=Hello%20Paradise%20Spa,%20I%20would%20like%20to%20book%20the%20Volcanic%20Hot%20Stone%20Therapy%20treatment." 
+                   target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  <i class="fa-brands fa-whatsapp"></i> Book Treatment
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Authentic Balinese Massage -->
+          <div class="glass-card service-card fade-up">
+            <div class="service-img-wrap">
+              <img src="assets/s5.jpeg" alt="Authentic Balinese Massage" class="service-img">
+              <span class="service-tag">Exotic</span>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Authentic Balinese Massage</h3>
+              <p class="service-desc">An exotic Indonesian therapy combining gentle stretches, palm pressure, and skin rolling using warm floral oils.</p>
+              <div class="service-footer">
+                <div class="service-meta">
+                  <span class="service-duration"><i class="fa-regular fa-clock"></i> 60 Mins</span>
+                  <span class="service-price">₹3,199</span>
+                </div>
+                <a href="https://wa.me/916366377888?text=Hello%20Paradise%20Spa,%20I%20would%20like%20to%20book%20the%20Authentic%20Balinese%20Massage%20treatment." 
+                   target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  <i class="fa-brands fa-whatsapp"></i> Book Treatment
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Traditional Thai Body Stretch -->
+          <div class="glass-card service-card fade-up">
+            <div class="service-img-wrap">
+              <img src="assets/s6.jpeg" alt="Traditional Thai Body Stretch" class="service-img">
+              <span class="service-tag">Active</span>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Traditional Thai Body Stretch</h3>
+              <p class="service-desc">Oil-free energizing therapy featuring assisted yoga postures, rhythmic compression, and joint mobilization along Sen energy lines.</p>
+              <div class="service-footer">
+                <div class="service-meta">
+                  <span class="service-duration"><i class="fa-regular fa-clock"></i> 75 Mins</span>
+                  <span class="service-price">₹3,299</span>
+                </div>
+                <a href="https://wa.me/916366377888?text=Hello%20Paradise%20Spa,%20I%20would%20like%20to%20book%20the%20Traditional%20Thai%20Body%20Stretch%20treatment." 
+                   target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  <i class="fa-brands fa-whatsapp"></i> Book Treatment
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. Ancient Ayurvedic Abhyanga -->
+          <div class="glass-card service-card fade-up">
+            <div class="service-img-wrap">
+              <img src="assets/s7.jpeg" alt="Ancient Ayurvedic Abhyanga" class="service-img">
+              <span class="service-tag">Healing</span>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Ancient Ayurvedic Abhyanga</h3>
+              <p class="service-desc">Traditional Indian full-body warm herbal oil massage designed to flush toxins, boost immunity, and restore Dosha balance.</p>
+              <div class="service-footer">
+                <div class="service-meta">
+                  <span class="service-duration"><i class="fa-regular fa-clock"></i> 90 Mins</span>
+                  <span class="service-price">₹4,499</span>
+                </div>
+                <a href="https://wa.me/916366377888?text=Hello%20Paradise%20Spa,%20I%20would%20like%20to%20book%20the%20Ancient%20Ayurvedic%20Abhyanga%20treatment." 
+                   target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  <i class="fa-brands fa-whatsapp"></i> Book Treatment
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. Hawaiian Lomi Lomi Ritual -->
+          <div class="glass-card service-card fade-up">
+            <div class="service-img-wrap">
+              <img src="assets/s8.jpeg" alt="Hawaiian Lomi Lomi Ritual" class="service-img">
+              <span class="service-tag">Fluid Wave</span>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Hawaiian Lomi Lomi Ritual</h3>
+              <p class="service-desc">Continuous, rhythmic forearm strokes mimicking oceanic waves that harmonize mind and physical body in deep relaxation.</p>
+              <div class="service-footer">
+                <div class="service-meta">
+                  <span class="service-duration"><i class="fa-regular fa-clock"></i> 60 Mins</span>
+                  <span class="service-price">₹3,499</span>
+                </div>
+                <a href="https://wa.me/916366377888?text=Hello%20Paradise%20Spa,%20I%20would%20like%20to%20book%20the%20Hawaiian%20Lomi%20Lomi%20Ritual%20treatment." 
+                   target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  <i class="fa-brands fa-whatsapp"></i> Book Treatment
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9. Therapeutic Foot Reflexology -->
+          <div class="glass-card service-card fade-up">
+            <div class="service-img-wrap">
+              <img src="assets/s9.jpeg" alt="Therapeutic Foot Reflexology" class="service-img">
+              <span class="service-tag">Focused</span>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Therapeutic Foot Reflexology</h3>
+              <p class="service-desc">Targeted pressure stimulation on specific foot reflex zones corresponding to internal organs to improve vitality.</p>
+              <div class="service-footer">
+                <div class="service-meta">
+                  <span class="service-duration"><i class="fa-regular fa-clock"></i> 45 Mins</span>
+                  <span class="service-price">₹1,999</span>
+                </div>
+                <a href="https://wa.me/916366377888?text=Hello%20Paradise%20Spa,%20I%20would%20like%20to%20book%20the%20Therapeutic%20Foot%20Reflexology%20treatment." 
+                   target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  <i class="fa-brands fa-whatsapp"></i> Book Treatment
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10. Shiatsu Pressure Point Therapy -->
+          <div class="glass-card service-card fade-up">
+            <div class="service-img-wrap">
+              <img src="assets/s10.jpeg" alt="Shiatsu Pressure Point Therapy" class="service-img">
+              <span class="service-tag">Japanese</span>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Shiatsu Pressure Point Therapy</h3>
+              <p class="service-desc">Japanese finger-pressure techniques applied along bodily energy pathways to alleviate stress and unblock vital Chi.</p>
+              <div class="service-footer">
+                <div class="service-meta">
+                  <span class="service-duration"><i class="fa-regular fa-clock"></i> 60 Mins</span>
+                  <span class="service-price">₹3,199</span>
+                </div>
+                <a href="https://wa.me/916366377888?text=Hello%20Paradise%20Spa,%20I%20would%20like%20to%20book%20the%20Shiatsu%20Pressure%20Point%20Therapy%20treatment." 
+                   target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  <i class="fa-brands fa-whatsapp"></i> Book Treatment
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 11. Royal Four-Hands Synchronized Massage -->
+          <div class="glass-card service-card fade-up">
+            <div class="service-img-wrap">
+              <img src="assets/s11.jpeg" alt="Royal Four-Hands Massage" class="service-img">
+              <span class="service-tag">Ultra Luxury</span>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Royal Four-Hands Massage</h3>
+              <p class="service-desc">Two master therapists working in seamless synchronized choreography to double the therapeutic impact and relaxation.</p>
+              <div class="service-footer">
+                <div class="service-meta">
+                  <span class="service-duration"><i class="fa-regular fa-clock"></i> 60 Mins</span>
+                  <span class="service-price">₹5,999</span>
+                </div>
+                <a href="https://wa.me/916366377888?text=Hello%20Paradise%20Spa,%20I%20would%20like%20to%20book%20the%20Royal%20Four-Hands%20Massage%20treatment." 
+                   target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  <i class="fa-brands fa-whatsapp"></i> Book Treatment
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 12. Warm Herbal Bundle (Potli) Therapy -->
+          <div class="glass-card service-card fade-up">
+            <div class="service-img-wrap">
+              <img src="assets/s12.jpeg" alt="Warm Herbal Potli Therapy" class="service-img">
+              <span class="service-tag">Traditional</span>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Warm Herbal Potli Therapy</h3>
+              <p class="service-desc">Warm cloth pouches stuffed with medicinal herbs and spices pressed onto sore joints and painful muscles for targeted relief.</p>
+              <div class="service-footer">
+                <div class="service-meta">
+                  <span class="service-duration"><i class="fa-regular fa-clock"></i> 75 Mins</span>
+                  <span class="service-price">₹3,899</span>
+                </div>
+                <a href="https://wa.me/916366377888?text=Hello%20Paradise%20Spa,%20I%20would%20like%20to%20book%20the%20Warm%20Herbal%20Potli%20Therapy%20treatment." 
+                   target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  <i class="fa-brands fa-whatsapp"></i> Book Treatment
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 13. Head, Neck & Shoulder De-Stress -->
+          <div class="glass-card service-card fade-up">
+            <div class="service-img-wrap">
+              <img src="assets/s13.jpeg" alt="Head, Neck & Shoulder De-Stress" class="service-img">
+              <span class="service-tag">Quick Relief</span>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Head, Neck & Shoulder De-Stress</h3>
+              <p class="service-desc">Focused pressure treatment designed for desk workers to eliminate tension headaches, stiff necks, and upper back tightness.</p>
+              <div class="service-footer">
+                <div class="service-meta">
+                  <span class="service-duration"><i class="fa-regular fa-clock"></i> 45 Mins</span>
+                  <span class="service-price">₹1,899</span>
+                </div>
+                <a href="https://wa.me/916366377888?text=Hello%20Paradise%20Spa,%20I%20would%20like%20to%20book%20the%20Head,%20Neck%20%26%20Shoulder%20De-Stress%20treatment." 
+                   target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  <i class="fa-brands fa-whatsapp"></i> Book Treatment
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 14. Detoxifying Body Scrub & Polish -->
+          <div class="glass-card service-card fade-up">
+            <div class="service-img-wrap">
+              <img src="assets/s14.jpeg" alt="Detoxifying Body Scrub & Polish" class="service-img">
+              <span class="service-tag">Glow</span>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Detoxifying Body Scrub & Polish</h3>
+              <p class="service-desc">Full-body organic Himalayan pink salt exfoliation followed by a rich botanical oil nourishment for silky smooth skin.</p>
+              <div class="service-footer">
+                <div class="service-meta">
+                  <span class="service-duration"><i class="fa-regular fa-clock"></i> 75 Mins</span>
+                  <span class="service-price">₹3,699</span>
+                </div>
+                <a href="https://wa.me/916366377888?text=Hello%20Paradise%20Spa,%20I%20would%20like%20to%20book%20the%20Detoxifying%20Body%20Scrub%20%26%20Polish%20treatment." 
+                   target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  <i class="fa-brands fa-whatsapp"></i> Book Treatment
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 15. Paradise Royal Signature Experience -->
+          <div class="glass-card service-card fade-up">
+            <div class="service-img-wrap">
+              <img src="assets/s15.jpeg" alt="Paradise Royal Signature Experience" class="service-img">
+              <span class="service-tag">Flagship</span>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Paradise Royal Signature Experience</h3>
+              <p class="service-desc">Our flagship 2-hour sanctuary package combining a body scrub, volcanic hot stones, custom aromatherapy, and head massage.</p>
+              <div class="service-footer">
+                <div class="service-meta">
+                  <span class="service-duration"><i class="fa-regular fa-clock"></i> 120 Mins</span>
+                  <span class="service-price">₹6,999</span>
+                </div>
+                <a href="https://wa.me/916366377888?text=Hello%20Paradise%20Spa,%20I%20would%20like%20to%20book%20the%20Paradise%20Royal%20Signature%20Experience." 
+                   target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  <i class="fa-brands fa-whatsapp"></i> Book Treatment
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. GALLERY SECTION (Filterable + Lightbox) -->
+    <section class="section gallery-section" id="gallery">
+      <div class="container">
+        <div class="section-title-wrap fade-up">
+          <span class="section-subtitle">Visual Sanctuary</span>
+          <h2 class="section-title">Explore Our Ambiance</h2>
+          <p class="section-description">Take a visual journey through our soothing private therapy suites, quiet lounges, and organic treatment spaces.</p>
+        </div>
+
+        <!-- Filter Category Tabs -->
+        <div class="gallery-filters fade-up">
+          <button class="filter-btn active" data-filter="all">All Photos</button>
+          <button class="filter-btn" data-filter="ambience">Ambience</button>
+          <button class="filter-btn" data-filter="massages">Massages</button>
+          <button class="filter-btn" data-filter="suites">Private Suites</button>
+          <button class="filter-btn" data-filter="wellness">Wellness Rituals</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid">
+
+          <div class="gallery-item fade-up" data-category="ambience" 
+               data-src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=85" 
+               data-caption="Serene Reception Lounge">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="Reception Lounge">
+            <div class="gallery-overlay">
+              <div class="gallery-icon-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+              <div class="gallery-info">
+                <h4>Serene Reception Lounge</h4>
+                <p>Ambience</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item fade-up" data-category="massages" 
+               data-src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=85" 
+               data-caption="Hot Stone Therapy Session">
+            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=600&q=80" alt="Hot Stone Therapy">
+            <div class="gallery-overlay">
+              <div class="gallery-icon-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+              <div class="gallery-info">
+                <h4>Hot Stone Therapy</h4>
+                <p>Massages</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item fade-up" data-category="suites" 
+               data-src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1200&q=85" 
+               data-caption="Royal Velvet Sapphire Suite">
+            <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=600&q=80" alt="Luxury Suite">
+            <div class="gallery-overlay">
+              <div class="gallery-icon-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+              <div class="gallery-info">
+                <h4>Royal Velvet Sapphire Suite</h4>
+                <p>Private Suites</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item fade-up" data-category="wellness" 
+               data-src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?auto=format&fit=crop&w=1200&q=85" 
+               data-caption="Organic Botanical Herbal Oils">
+            <img src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?auto=format&fit=crop&w=600&q=80" alt="Organic Oils">
+            <div class="gallery-overlay">
+              <div class="gallery-icon-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+              <div class="gallery-info">
+                <h4>Organic Botanical Oils</h4>
+                <p>Wellness Rituals</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item fade-up" data-category="ambience" 
+               data-src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=1200&q=85" 
+               data-caption="Zen Flower Bath Setup">
+            <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=600&q=80" alt="Flower Bath">
+            <div class="gallery-overlay">
+              <div class="gallery-icon-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+              <div class="gallery-info">
+                <h4>Zen Flower Bath Setup</h4>
+                <p>Ambience</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item fade-up" data-category="massages" 
+               data-src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=85" 
+               data-caption="Aromatherapy Palm Massage">
+            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=600&q=80" alt="Aromatherapy Massage">
+            <div class="gallery-overlay">
+              <div class="gallery-icon-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+              <div class="gallery-info">
+                <h4>Aromatherapy Palm Massage</h4>
+                <p>Massages</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. SPECIAL OFFERS SECTION -->
+    <section class="section offers-section" id="offers">
+      <div class="container">
+        <div class="section-title-wrap fade-up">
+          <span class="section-subtitle">Exclusive Packages</span>
+          <h2 class="section-title">Special Spa Packages & Offers</h2>
+          <p class="section-description">Indulge in our curated promotional packages designed for romantic getaways, weekend escapes, and long-term membership privileges.</p>
+        </div>
+
+        <div class="offers-grid">
+
+          <!-- Offer 1 -->
+          <div class="glass-card offer-card fade-up">
+            <span class="offer-badge">Save 25%</span>
+            <div class="offer-header">
+              <h3 class="offer-title">Couples Rejuvenation Retreat</h3>
+              <div class="offer-price-tag">
+                ₹6,999 <span class="original">₹9,499</span>
+              </div>
+              <p style="font-size: 0.9rem;">The ultimate dual relaxation experience in our private VIP couple suite.</p>
+            </div>
+            <ul class="offer-features">
+              <li><i class="fa-solid fa-circle-check"></i> 75 Mins Swedish or Aromatherapy Massage</li>
+              <li><i class="fa-solid fa-circle-check"></i> 15 Mins Organic Rose Hydrating Facial</li>
+              <li><i class="fa-solid fa-circle-check"></i> Private Jacuzzi & Herbal Tea Service</li>
+            </ul>
+            <a href="https://wa.me/916366377888?text=Hello%20Paradise%20Spa,%20I%20would%20like%20to%20book%20the%20Couples%20Rejuvenation%20Retreat." 
+               target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%;">
+              <i class="fa-brands fa-whatsapp"></i> Claim Offer via WhatsApp
+            </a>
+          </div>
+
+          <!-- Offer 2 -->
+          <div class="glass-card offer-card fade-up">
+            <span class="offer-badge">Weekend Special</span>
+            <div class="offer-header">
+              <h3 class="offer-title">Weekend Renewal Escapade</h3>
+              <div class="offer-price-tag">
+                ₹4,499 <span class="original">₹5,999</span>
+              </div>
+              <p style="font-size: 0.9rem;">Recharge after a busy work week with our comprehensive recovery package.</p>
+            </div>
+            <ul class="offer-features">
+              <li><i class="fa-solid fa-circle-check"></i> 90 Mins Volcanic Hot Stone Therapy</li>
+              <li><i class="fa-solid fa-circle-check"></i> Complimentary Foot Reflexology (30m)</li>
+              <li><i class="fa-solid fa-circle-check"></i> Detoxifying Herbal Steam Bath</li>
+            </ul>
+            <a href="https://wa.me/916366377888?text=Hello%20Paradise%20Spa,%20I%20would%20like%20to%20book%20the%20Weekend%20Renewal%20Escapade." 
+               target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%;">
+              <i class="fa-brands fa-whatsapp"></i> Claim Offer via WhatsApp
+            </a>
+          </div>
+
+          <!-- Offer 3 -->
+          <div class="glass-card offer-card fade-up">
+            <span class="offer-badge">VIP Membership</span>
+            <div class="offer-header">
+              <h3 class="offer-title">Paradise Annual VIP Pass</h3>
+              <div class="offer-price-tag">
+                ₹24,999 <span class="original">₹35,000</span>
+              </div>
+              <p style="font-size: 0.9rem;">Annual access card providing priority bookings and deep year-round savings.</p>
+            </div>
+            <ul class="offer-features">
+              <li><i class="fa-solid fa-circle-check"></i> 12 Complimentary 60-Min Massages of choice</li>
+              <li><i class="fa-solid fa-circle-check"></i> 20% Off all additional services for friends</li>
+              <li><i class="fa-solid fa-circle-check"></i> Free birthday spa voucher worth ₹5,000</li>
+            </ul>
+            <a href="https://wa.me/916366377888?text=Hello%20Paradise%20Spa,%20I%20would%20like%20to%20inquire%20about%20the%20Paradise%20Annual%20VIP%20Pass." 
+               target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%;">
+              <i class="fa-brands fa-whatsapp"></i> Inquire VIP Membership
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CUSTOMER REVIEWS SECTION -->
+    <section class="section reviews-section" id="reviews">
+      <div class="container">
+        <div class="section-title-wrap fade-up">
+          <span class="section-subtitle">Client Experiences</span>
+          <h2 class="section-title">What Our Guests Say</h2>
+          <p class="section-description">Read authentic feedback from valued guests who have experienced tranquility at Paradise Spa.</p>
+        </div>
+
+        <div class="reviews-slider-wrap fade-up">
+          <div class="reviews-track" id="reviewsTrack">
+
+            <!-- Review 1 -->
+            <div class="review-card glass-card">
+              <div class="review-stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="review-quote">
+                "The Deep Tissue Massage at Paradise Spa was nothing short of miraculous. The therapist identified exact knot points in my lower back that had troubled me for months. The ambiance in Velvet Sapphire was divine!"
+              </p>
+              <div class="review-author">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Client Photo" class="author-img">
+                <div class="author-info">
+                  <div class="author-name">Ananya Sharma</div>
+                  <div class="author-tag">Verified Guest • Deep Tissue Treatment</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="review-card glass-card">
+              <div class="review-stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="review-quote">
+                "My partner and I booked the Couples Rejuvenation Retreat for our anniversary. From the warm lavender foot soak to the hot stone session, every detail felt luxurious and deeply relaxing!"
+              </p>
+              <div class="review-author">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Client Photo" class="author-img">
+                <div class="author-info">
+                  <div class="author-name">Vikram Malhotra</div>
+                  <div class="author-tag">Verified Guest • Couples Package</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="review-card glass-card">
+              <div class="review-stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="review-quote">
+                "As someone who travels frequently, the Four-Hands Massage here is by far the best I have experienced worldwide. Truly a 5-star sanctuary. Booking over WhatsApp was super quick too!"
+              </p>
+              <div class="review-author">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80" alt="Client Photo" class="author-img">
+                <div class="author-info">
+                  <div class="author-name">Priya Roy</div>
+                  <div class="author-tag">Verified Guest • Royal Four-Hands</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Slider Controls -->
+          <div class="slider-controls">
+            <button class="slider-btn" id="prevReview" aria-label="Previous Review"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="slider-dots" id="sliderDots"></div>
+            <button class="slider-btn" id="nextReview" aria-label="Next Review"><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CONTACT & LOCATION SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+
+          <div class="contact-info-wrap fade-up">
+            <span class="section-subtitle">Get in Touch</span>
+            <h3>Visit Our Sanctuary</h3>
+            <p>We invite you to reach out for appointments, custom group bookings, or inquiries about our luxury therapies.</p>
+
+            <div class="contact-info-list">
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="contact-details">
+                  <h4>Spa Location</h4>
+                  <p>1st floor, Nasco Ishanya Building, Khanapur Main Rd, above Airtel Office, Tilakwadi, Belagavi, Karnataka 590006</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="contact-details">
+                  <h4>Phone & Direct Booking</h4>
+                  <a href="tel:+916366377888">63663 77888</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
+                <div class="contact-details">
+                  <h4>Opening Hours</h4>
+                  <p>Monday – Sunday: 9:00 AM – 10:00 PM</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="contact-details">
+                  <h4>Email Inquiry</h4>
+                  <a href="mailto:paradisespaandwellnesscentre@gmail.com">paradisespaandwellnesscentre@gmail.com</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Responsive Google Maps Embed -->
+            <div class="map-container">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.3524778963265!2d74.50481377634911!3d15.838061184808444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf67a3399e50af%3A0xd4a8f1013bd9057!2sParadise%20(Blue%20Heaven)%20Spa%20%26%20Wellness%20Centre!5e0!3m2!1sen!2sin!4v1788203182172!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Paradise Spa Location Map"></iframe>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="glass-card contact-form-wrap fade-up">
+            <h3>Reserve Your Sanctuary Session</h3>
+            <form id="contactForm">
+              <div class="form-group">
+                <label class="form-label" for="fullName">Full Name *</label>
+                <input type="text" id="fullName" class="form-input" placeholder="e.g. Sophia Johnson" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="phone">Phone / Mobile *</label>
+                <input type="tel" id="phone" class="form-input" placeholder="+91 98765 43210" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="serviceSelect">Preferred Therapy</label>
+                <select id="serviceSelect" class="form-select">
+                  <option value="General Inquiry">Select a Massage Therapy...</option>
+                  <option value="Deep Tissue Therapy">Deep Tissue Therapy (₹3,499)</option>
+                  <option value="Swedish Relaxation Massage">Swedish Relaxation Massage (₹2,999)</option>
+                  <option value="Signature Aromatherapy Ritual">Signature Aromatherapy Ritual (₹3,299)</option>
+                  <option value="Volcanic Hot Stone Therapy">Volcanic Hot Stone Therapy (₹3,999)</option>
+                  <option value="Authentic Balinese Massage">Authentic Balinese Massage (₹3,199)</option>
+                  <option value="Traditional Thai Body Stretch">Traditional Thai Body Stretch (₹3,299)</option>
+                  <option value="Ancient Ayurvedic Abhyanga">Ancient Ayurvedic Abhyanga (₹4,499)</option>
+                  <option value="Hawaiian Lomi Lomi Ritual">Hawaiian Lomi Lomi Ritual (₹3,499)</option>
+                  <option value="Therapeutic Foot Reflexology">Therapeutic Foot Reflexology (₹1,999)</option>
+                  <option value="Shiatsu Pressure Point Therapy">Shiatsu Pressure Point Therapy (₹3,199)</option>
+                  <option value="Royal Four-Hands Massage">Royal Four-Hands Massage (₹5,999)</option>
+                  <option value="Warm Herbal Potli Therapy">Warm Herbal Potli Therapy (₹3,899)</option>
+                  <option value="Head, Neck & Shoulder De-Stress">Head, Neck & Shoulder De-Stress (₹1,899)</option>
+                  <option value="Detoxifying Body Scrub & Polish">Detoxifying Body Scrub & Polish (₹3,699)</option>
+                  <option value="Paradise Royal Signature Experience">Paradise Royal Signature Experience (₹6,999)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="preferredDate">Preferred Date & Time</label>
+                <input type="datetime-local" id="preferredDate" class="form-input">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="message">Special Requests / Notes</label>
+                <textarea id="message" class="form-textarea" placeholder="Tell us about any specific muscle tension areas or preferences..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                Submit Booking Request
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <a href="#home" class="brand-logo">
+            <img src="assets/logo.png" alt="Paradise Spa Logo" class="logo-img">
+            <span>Paradise<span class="highlight">Spa</span></span>
+          </a>
+          <p>Imperial Sapphire & Rose Gold luxury wellness sanctuary. Providing deep relaxation and therapeutic massage rituals for the soul.</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/paradise_spa_belagavi/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61558304188139" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://wa.me/916366377888" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" class="social-icon" aria-label="TripAdvisor"><i class="fa-brands fa-tripadvisor"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">15 Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#offers">Special Offers</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Popular Therapies</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Deep Tissue Massage</a></li>
+            <li><a href="#services">Hot Stone Therapy</a></li>
+            <li><a href="#services">Aromatherapy Ritual</a></li>
+            <li><a href="#services">Balinese Massage</a></li>
+            <li><a href="#services">Royal Four-Hands</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Hours & Contact</h4>
+          <ul class="footer-links" style="color: var(--text-muted); font-size: 0.95rem;">
+            <li><i class="fa-regular fa-clock" style="color: var(--accent-primary);"></i> Mon - Sun: 9AM - 10PM</li>
+            <li><i class="fa-solid fa-phone" style="color: var(--accent-primary);"></i> 63663 77888</li>
+            <li><i class="fa-solid fa-location-dot" style="color: var(--accent-primary);"></i> 1st floor, Nasco Ishanya Building, Khanapur Main Rd, above Airtel Office, Tilakwadi, Belagavi, Karnataka 590006</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Paradise Spa. All rights reserved. Designed with Imperial Sapphire & Rose Gold Elegance.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>

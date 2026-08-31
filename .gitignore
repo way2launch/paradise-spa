@@ -1,0 +1,81 @@
+# Paradise Spa - Git Ignore Rules
+
+# ==========================================
+# OS & Editor Files
+# ==========================================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Windows
+*.lnk
+
+# macOS
+.AppleDouble
+.LSOverride
+
+# VS Code / IDE
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+
+# ==========================================
+# Dependencies & Build (not used, but safe)
+# ==========================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp
+.pnp.js
+
+# ==========================================
+# Testing & Coverage
+# ==========================================
+coverage/
+.nyc_output/
+
+# ==========================================
+# Production / Dist (if you add build step later)
+# ==========================================
+dist/
+build/
+*.min.css
+*.min.js
+
+# ==========================================
+# Environment & Secrets
+# ==========================================
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# ==========================================
+# Logs
+# ==========================================
+logs/
+*.log
+
+# ==========================================
+# Misc
+# ==========================================
+*.tgz
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+
+# ==========================================
+# Project Specific - Keep Assets!
+# ==========================================
+# DO NOT ignore assets/ folder - contains logo.png and s1-s15.jpeg
+# DO NOT ignore index.html, styles.css, script.js, README.md
