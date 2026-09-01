@@ -474,10 +474,13 @@ body.lightbox-open .floating-whatsapp {
   align-items: center;
   position: relative;
   padding-top: 7rem;
-  background: linear-gradient(180deg, rgba(11, 19, 43, 0.6) 0%, rgba(11, 19, 43, 0.95) 100%),
-              url('assets/Welcome.jpeg') center/contain no-repeat;
-  background-size: cover;
-  background-position: center center;
+  background-image:
+    linear-gradient(180deg, rgba(11, 19, 43, 0.6) 0%, rgba(11, 19, 43, 0.95) 100%),
+    url('assets/Welcome.jpeg');
+  background-size: cover, cover;
+  background-position: center center, center center;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: scroll, fixed;
 }
 
 .hero-overlay {
@@ -1478,6 +1481,18 @@ body.lightbox-open .floating-whatsapp {
     display: block;
   }
 
+  .nav-container {
+    gap: 0.5rem;
+  }
+
+  .nav-actions {
+    gap: 0;
+  }
+
+  .container {
+    padding: 0 1.25rem;
+  }
+
   .hero-title {
     font-size: 2.5rem;
   }
@@ -1665,6 +1680,10 @@ body.lightbox-open .floating-whatsapp {
 
   .nav-container {
     gap: 0.5rem;
+  }
+
+  .container {
+    padding: 0 1rem;
   }
 
   .service-content {
