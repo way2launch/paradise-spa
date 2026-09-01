@@ -58,12 +58,14 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileDrawer.classList.add('active');
     mobileOverlay.classList.add('active');
     document.body.style.overflow = 'hidden';
+    document.body.classList.add('mobile-menu-open');
   }
 
   function closeMobileMenu() {
     mobileDrawer.classList.remove('active');
     mobileOverlay.classList.remove('active');
     document.body.style.overflow = 'auto';
+    document.body.classList.remove('mobile-menu-open');
   }
 
   if (mobileToggle) {
@@ -161,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function openLightbox(index) {
     updateVisibleItems();
     if (visibleGalleryItems.length === 0) return;
-    
+
     currentGalleryIndex = index;
     const currentItem = visibleGalleryItems[currentGalleryIndex];
     const imgSrc = currentItem.getAttribute('data-src');
@@ -171,11 +173,13 @@ document.addEventListener('DOMContentLoaded', () => {
     lightboxCaption.textContent = caption;
     lightboxModal.classList.add('active');
     document.body.style.overflow = 'hidden';
+    document.body.classList.add('lightbox-open');
   }
 
   function closeLightbox() {
     lightboxModal.classList.remove('active');
     document.body.style.overflow = 'auto';
+    document.body.classList.remove('lightbox-open');
   }
 
   function showNextLightboxImage() {
