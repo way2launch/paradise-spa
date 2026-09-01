@@ -475,7 +475,9 @@ body.lightbox-open .floating-whatsapp {
   position: relative;
   padding-top: 7rem;
   background: linear-gradient(180deg, rgba(11, 19, 43, 0.6) 0%, rgba(11, 19, 43, 0.95) 100%),
-              url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1920&q=85') center/cover no-repeat;
+              url('assets/Welcome.jpeg') center/contain no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
 .hero-overlay {
